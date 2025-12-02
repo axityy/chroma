@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chroma Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="logo">Chroma<span>Store</span></div>
+
+        <div class="right">
+            <div id="user-info" class="user-info hidden">
+                <img id="user-avatar" src="" alt="avatar">
+                <span id="user-name"></span>
+            </div>
+
+            <button id="login-btn" class="login-btn">Login</button>
+        </div>
+    </nav>
+
+    <!-- LOGIN MODAL -->
+    <div id="login-modal" class="modal hidden">
+        <div class="modal-bg"></div>
+
+        <div class="modal-content animate-in">
+            <h2>Continue With Discord</h2>
+            <p>You must log in to continue.</p>
+            <button id="discord-auth" class="discord-btn">Login With Discord</button>
+            <button id="close-modal" class="close-btn">Cancel</button>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Welcome to <span class="chroma">ChromaStore</span></h1>
+        <p>Powerful, fast, secure digital access.</p>
+        <a href="#products" class="cta-btn">Browse Products</a>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="products">
+        <h2 class="section-title">Products</h2>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <h3>Chroma Basic</h3>
+                <p>Essential premium access</p>
+                <div
+class="price">$9.99</div>
+                <button class="buy-btn">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <h3>Chroma Pro</h3>
+                <p>Advanced tier with bonus features</p>
+                <div class="price">$19.99</div>
+                <button class="buy-btn">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <h3>Chroma Ultra</h3>
+                <p>Maximum tier + VIP support</p>
+                <div class="price">$29.99</div>
+                <button class="buy-btn">Buy</button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 ChromaStore</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
