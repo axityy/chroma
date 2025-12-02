@@ -9,24 +9,25 @@ const userName = document.getElementById("user-name");
 
 let loggedIn = false;
 
+// Your actual Discord OAuth link goes here
+const OAUTH_URL = "YOUR_DISCORD_OAUTH_URL_HERE";
+
 /* ------------------------
-   LOGIN BUTTON (NAVBAR)
+   SIGN IN button (nav)
    ------------------------ */
 loginBtn.onclick = () => {
-    // Redirect to Discord OAuth (REAL REDIRECT)
-    window.location.href = "YOUR_DISCORD_OAUTH_URL_HERE";
+    openModal();
 };
 
 /* ------------------------
-   BUY BUTTON → show modal
-   ONLY IF not logged in
+   BUY buttons
    ------------------------ */
 document.querySelectorAll(".buy-btn").forEach(btn => {
     btn.onclick = () => {
         if (!loggedIn) {
             openModal();
         } else {
-            alert("Purchase complete! (template)");
+            alert("Purchase Complete!");
         }
     };
 });
@@ -37,10 +38,16 @@ document.querySelectorAll(".buy-btn").forEach(btn => {
 function openModal() {
     modal.classList.remove("hidden");
 
+    // Animation
     const box = document.querySelector(".modal-content");
-    box.classList.remove("animate-in");
-    void box.offsetWidth; // restart animation
-    box.classList.add("animate-in");
+    box.style.opacity = "0";
+    box.style.transform = "translateY(20px)";
+
+    setTimeout(() => {
+        box.style.transition = "all 0.25s ease";
+        box.style.opacity = "1";
+        box.style.transform = "translateY(0)";
+    }, 10);
 }
 
 /* ------------------------
@@ -51,9 +58,8 @@ closeModal.onclick = () => {
 };
 
 /* ------------------------
-   MODAL "Login With Discord"
-   (same redirect as navbar)
+   Login inside modal
    ------------------------ */
 discordAuth.onclick = () => {
-    window.location.href = "YOUR_DISCORD_OAUTH_URL_HERE";
+    window.location.href = OAUTH_URL;
 };
