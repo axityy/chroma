@@ -9,12 +9,18 @@ const userName = document.getElementById("user-name");
 
 let loggedIn = false;
 
-/* OPEN MODAL from Login button */
+/* ------------------------
+   LOGIN BUTTON (NAVBAR)
+   ------------------------ */
 loginBtn.onclick = () => {
-    openModal();
+    // Redirect to Discord OAuth (REAL REDIRECT)
+    window.location.href = "YOUR_DISCORD_OAUTH_URL_HERE";
 };
 
-/* OPEN MODAL from Buy buttons */
+/* ------------------------
+   BUY BUTTON → show modal
+   ONLY IF not logged in
+   ------------------------ */
 document.querySelectorAll(".buy-btn").forEach(btn => {
     btn.onclick = () => {
         if (!loggedIn) {
@@ -25,32 +31,29 @@ document.querySelectorAll(".buy-btn").forEach(btn => {
     };
 });
 
-/* Open modal function */
+/* ------------------------
+   OPEN MODAL
+   ------------------------ */
 function openModal() {
     modal.classList.remove("hidden");
 
-    // Restart animation
     const box = document.querySelector(".modal-content");
     box.classList.remove("animate-in");
-    void box.offsetWidth;
+    void box.offsetWidth; // restart animation
     box.classList.add("animate-in");
 }
 
-/* Close modal */
+/* ------------------------
+   CLOSE MODAL
+   ------------------------ */
 closeModal.onclick = () => {
     modal.classList.add("hidden");
 };
 
-/* Fake Discord Authentication */
+/* ------------------------
+   MODAL "Login With Discord"
+   (same redirect as navbar)
+   ------------------------ */
 discordAuth.onclick = () => {
-    loggedIn = true;
-
-    // Fake user info (you can replace these later with real OAuth2 data)
-    userAvatar.src = "https://cdn.discordapp.com/embed/avatars/4.png";
-    userName.textContent = "ChromaUser";
-
-    userInfo.classList.remove("hidden");
-    loginBtn.classList.add("hidden");
-
-    modal.classList.add("hidden");
+    window.location.href = "YOUR_DISCORD_OAUTH_URL_HERE";
 };
