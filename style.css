@@ -188,7 +188,6 @@ body::before {
     to {opacity: 1;}
 }
 
-/* Modal box */
 .modal-content {
     position: relative;
     background: #141414;
@@ -196,11 +195,11 @@ body::before {
     border-radius: 12px;
     border: 1px solid #333;
     width: 330px;
-    animation: slideUp 0.35s cubic-bezier(0.2,0.8,0.4,1) forwards;
-    opacity: 0;
-    transform: translateY(20px);
-    z-index: 2;        /* FIXED */
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 2;
 }
+
 
 @keyframes slideUp {
     to {opacity: 1; transform: translateY(0);}
