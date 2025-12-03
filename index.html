@@ -3,49 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chroma Store</title>
+  <title>DiamondBet</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div id="loader"><h1>Loading...</h1></div>
 
-  <!-- Loading Screen -->
-  <div class="loading-screen">
-    <div class="loader"></div>
-  </div>
-
-  <nav class="navbar">
-    <div class="brand">chroma</div>
-    <ul class="nav-links">
-      <li><a href="#products">Products</a></li>
-      <li><a href="reset.html">Reset HWID</a></li>
-      
-    </ul>
-    <button class="signin-btn">Sign In</button>
-  </nav>
-
-  <header class="hero">
-    <h1>Welcome to Chroma</h1>
-    <p>Secure, instant delivery. Trusted by thousands of creators & developers.</p>
+  <header>
+    <div class="logo">DIAMOND BET</div>
+    <button class="login-btn">Login</button>
   </header>
 
-  <section id="products" class="products">
-    <h2>Featured Product</h2>
-    <div class="product-grid single">
-      <div class="card">Product 1</div>
+  <section class="stats">
+    <div class="stat"> <span>68</span><p>Total Items</p> </div>
+    <div class="stat"> <span>15,602</span><p>Total Value</p> </div>
+    <div class="stat"> <span>5</span><p>Active Games</p> </div>
+  </section>
+
+  <section class="matches">
+    <div class="match">
+      <div class="players">
+        <img src="p1.png" />
+        <img src="p2.png" />
+      </div>
+      <div class="value">1.03K <small>973 - 1.08K</small></div>
+      <button class="join">Join</button>
+    </div>
+
+    <div class="match">
+      <div class="players">
+        <img src="p3.png" />
+        <img src="p4.png" />
+      </div>
+      <div class="value">1.81K <small>859 - 951</small></div>
+      <button class="join">View</button>
     </div>
   </section>
 
-  <section id="support" class="support">
-    <h2>Support</h2>
-    <p>Need help? Our team is here 24/7.</p>
-  </section>
-
-  <!-- FIXED SCRIPT -->
-  <script>
-    window.addEventListener("load", () => {
-      document.querySelector(".loading-screen").classList.add("hide");
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
