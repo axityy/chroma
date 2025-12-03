@@ -10,6 +10,11 @@ body {
   overflow-x: hidden;
   font-family: 'Rubik', sans-serif;
 }
+
+body, h1, h2, h3, h4, p, button, .value, .stat {
+  font-weight: 600; /* semi-bold; change to 700 for full bold, or 800/900 if font supports it */
+}
+
 #loader {
   position: fixed;
   inset: 0;
