@@ -188,6 +188,101 @@
       border-radius: 8px;
       margin: 0 auto 4px auto;
     }
+    
+    /* RAW RAIN BOX */
+.rain-box {
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 28, 36, 0.65);
+  padding: 20px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Title */
+.rain-title {
+  color: #66ff9a;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Green Amount */
+.rain-amount {
+  color: #66ff9a;
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-top: 2px;
+  text-shadow: 0 0 12px rgba(102, 255, 154, 0.65);
+}
+
+/* Timer */
+.rain-timer {
+  color: #66ff9a;
+  font-size: 13px;
+  opacity: 0.55;
+  margin-top: -4px;
+  font-weight: 600;
+}
+
+/* Buttons Row */
+.rain-buttons {
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+}
+
+/* TIP BUTTON */
+.rain-tip-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 0;
+  background: transparent;
+  border: 2px solid #66ff9a;
+  border-radius: 10px;
+  color: #66ff9a;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.tip-icon {
+  width: 18px;
+  height: 18px;
+  background: #66ff9a;
+  border-radius: 50%;
+}
+
+/* JOIN BUTTON */
+.rain-join-btn {
+  flex: 1;
+  padding: 10px 0;
+  background: #66ff9a;
+  border-radius: 10px;
+  border: none;
+  color: #0f151c;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Info text */
+.rain-info {
+  margin-top: 14px;
+  font-size: 13px;
+  opacity: 0.45;
+  font-weight: 500;
+}
+
+.rain-info span {
+  color: #66ff9a;
+  opacity: 1;
+}
+
+
   </style>
 </head>
 <body>
@@ -209,9 +304,29 @@
 
   <!-- MAIN PANELS -->
   <div class="row">
-    <div class="left-panel">
-      <div class="img-placeholder"></div>
+<div class="left-panel">
+
+  <div class="rain-box">
+    <div class="rain-title">THE RAW RAIN</div>
+    <div class="rain-amount">2.632</div>
+    <div class="rain-timer">RAINS IN 9M 54S</div>
+
+    <div class="rain-buttons">
+      <button class="rain-tip-btn">
+        <span class="tip-icon"></span>
+        TIP
+      </button>
+
+      <button class="rain-join-btn">JOIN</button>
     </div>
+
+    <div class="rain-info">
+      Claim balance from the pot every <span>30 minutes</span>
+    </div>
+  </div>
+
+</div>
+
 
     <div class="right-panel">
       <div class="img-placeholder" style="height: 100%;"></div>
