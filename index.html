@@ -1,52 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css" />
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DiamondBet</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Pixel Copy Layout</title>
+  <style>
+    /* RESET */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #111820;
+      font-family: Arial, sans-serif;
+      color: white;
+      width: 100vw;
+      overflow-x: hidden;
+    }
+
+    /* TOP BAR */
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 20px;
+      gap: 15px;
+    }
+    .btn-login, .btn-register {
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .btn-login {
+      background: #1c2530;
+    }
+    .btn-register {
+      background: #4cff88;
+      color: #111820;
+    }
+
+    /* MAIN SECTIONS */
+    .container {
+      width: 100%;
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .left-panel {
+      width: 40%;
+      background: #16212c;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .right-panel {
+      width: 60%;
+      background: #16212c;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    /* PLACEHOLDER IMAGE BLOCK */
+    .img-placeholder {
+      width: 100%;
+      height: 220px;
+      background: #222f3a;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* CASE GRID */
+    .cases {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+
+    .case-box {
+      background: #1a2430;
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+    .case-img-placeholder {
+      width: 100%;
+      height: 110px;
+      background: #293542;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    /* FOOTER NAV */
+    .footer-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #111820;
+      padding: 15px;
+      display: flex;
+      justify-content: space-evenly;
+      border-top: 1px solid #222;
+    }
+      /* MORE PRECISE PIXEL TUNING */
+    body {
+      background: #0f151c;
+    }
+    .top-bar {
+      padding: 18px 26px;
+    }
+    .btn-login {
+      background: #192028;
+      padding: 14px 34px;
+      font-size: 15px;
+    }
+    .btn-register {
+      padding: 14px 34px;
+      background: #4cff88;
+      font-size: 15px;
+    }
+
+    /* LEFT PANEL — exact ratio */
+    .left-panel {
+      height: 260px;
+    }
+
+    /* RIGHT PANEL — oversized hero section */
+    .right-panel {
+      height: 260px;
+    }
+
+    /* PLACEHOLDER REFINEMENTS */
+    .img-placeholder {
+      border: 2px dashed #2e3b46;
+    }
+
+    /* CASE BOXES — borders match screenshot glow */
+    .case-box {
+      border: 1px solid #202a33;
+      padding-top: 22px;
+      padding-bottom: 22px;
+    }
+
+    /* FOOTER NAV — matching height */
+    .footer-nav {
+      height: 72px;
+      font-size: 15px;
+    }
+  </style>
 </head>
 <body>
-  <div id="loader"><h1>Loading...</h1></div>
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="btn-login">LOGIN</div>
+    <div class="btn-register">REGISTER</div>
+  </div>
 
-  <header>
-    <div class="logo">DIAMOND BET</div>
-    <button class="login-btn">Login</button>
-  </header>
-
-  <section class="stats">
-    <div class="stat"> <span>68</span><p>Total Items</p> </div>
-    <div class="stat"> <span>15,602</span><p>Total Value</p> </div>
-    <div class="stat"> <span>5</span><p>Active Games</p> </div>
-  </section>
-
-  <section class="matches">
-    <div class="match">
-      <div class="players">
-        <img src="p1.png" />
-        <img src="p2.png" />
-      </div>
-      <div class="value">1.03K <small>973 - 1.08K</small></div>
-      <button class="join">Join</button>
+  <!-- MAIN ROW -->
+  <div class="container">
+    <div class="left-panel">
+      <div class="img-placeholder"></div>
     </div>
 
-    <div class="match">
-      <div class="players">
-        <img src="p3.png" />
-        <img src="p4.png" />
-      </div>
-      <div class="value">1.81K <small>859 - 951</small></div>
-      <button class="join">View</button>
+    <div class="right-panel">
+      <div class="img-placeholder"></div>
     </div>
-  </section>
+  </div>
 
-  <script src="script.js"></script>
+  <!-- FEATURED CASES -->
+  <div class="cases">
+    <div class="case-box">
+      <div class="case-img-placeholder"></div>
+    </div>
+    <div class="case-box">
+      <div class="case-img-placeholder"></div>
+    </div>
+    <div class="case-box">
+      <div class="case-img-placeholder"></div>
+    </div>
+    <div class="case-box">
+      <div class="case-img-placeholder"></div>
+    </div>
+    <div class="case-box">
+      <div class="case-img-placeholder"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER NAV -->
+  <div class="footer-nav">
+    <div>Home</div>
+    <div>Menu</div>
+    <div>Games</div>
+    <div>Chat</div>
+  </div>
 </body>
 </html>
