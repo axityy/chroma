@@ -8,7 +8,7 @@ body {
   background: #0b0f1a;
   color: white;
   overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 #loader {
   position: fixed;
@@ -35,7 +35,7 @@ header {
 }
 .logo {
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 500;
   color: #56c3ff;
   text-shadow: 0 0 14px #1e90ff;
 }
@@ -49,6 +49,9 @@ header {
   font-size: 1.1rem;
   cursor: pointer;
   box-shadow: 0 0 12px #56c3ff;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between icon and text */
 }
 .stats {
   display: flex;
