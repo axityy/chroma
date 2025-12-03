@@ -13,8 +13,6 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-
-      /* APPLY MONTSERRAT BOLD TO EVERYTHING */
       font-family: 'Montserrat', sans-serif !important;
       font-weight: 700 !important;
     }
@@ -24,6 +22,8 @@
       color: #fff;
       overflow-x: hidden;
       width: 100vw;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     /* TOP BAR */
@@ -44,11 +44,7 @@
       border-radius: 8px;
     }
 
-    .top-buttons {
-      display: flex;
-      gap: 18px;
-    }
-
+    .top-buttons { display: flex; gap: 18px; }
     .btn-login {
       background: #192028;
       padding: 14px 34px;
@@ -56,8 +52,8 @@
       border: none;
       font-size: 15px;
       color: white;
+      cursor: pointer;
     }
-
     .btn-register {
       padding: 14px 34px;
       background: #4cff88;
@@ -65,14 +61,10 @@
       color: #000;
       border: none;
       font-size: 15px;
+      cursor: pointer;
     }
 
-    /* RIGHT ICONS */
-    .right-icons {
-      display: flex;
-      gap: 14px;
-    }
-
+    .right-icons { display: flex; gap: 14px; }
     .icon-small {
       width: 32px;
       height: 32px;
@@ -80,12 +72,18 @@
       border-radius: 10px;
     }
 
-    /* MAIN ROW */
+    /* LAYOUT */
+    .container {
+      width: 1200px;
+      max-width: calc(100% - 40px);
+      margin: 24px auto 80px;
+    }
+
     .row {
       width: 100%;
       display: flex;
-      padding: 20px;
       gap: 25px;
+      align-items: flex-start;
     }
 
     /* LEFT PANEL */
@@ -97,14 +95,6 @@
       padding: 18px;
     }
 
-    .img-placeholder {
-      width: 100%;
-      height: 100%;
-      background: #2c3a44;
-      border-radius: 12px;
-      border: 2px dashed #40525c;
-    }
-
     /* RIGHT HERO */
     .right-panel {
       flex: 1;
@@ -114,7 +104,7 @@
       padding: 18px;
     }
 
-    /* SECTION: CASES */
+    /* CASES SECTION */
     .cases-title {
       text-align: center;
       margin-top: 40px;
@@ -128,6 +118,8 @@
       display: flex;
       gap: 22px;
       padding: 0 20px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .case-box {
@@ -149,17 +141,8 @@
       border: 2px dashed #3a4a55;
     }
 
-    .case-name {
-      margin-top: 10px;
-      font-size: 14px;
-      opacity: 0.8;
-    }
-
-    .case-value {
-      margin-top: 6px;
-      font-size: 15px;
-    }
-
+    .case-name { margin-top: 10px; font-size: 14px; opacity: 0.8; }
+    .case-value { margin-top: 6px; font-size: 15px; }
     .open-btn {
       margin-top: 10px;
       padding: 10px 20px;
@@ -171,29 +154,7 @@
       cursor: pointer;
     }
 
-    /* FOOTER */
-    .footer-nav {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 72px;
-      background: #0d1218;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      font-size: 15px;
-    }
-
-    .footer-icon {
-      width: 28px;
-      height: 28px;
-      background: #26333f;
-      border-radius: 8px;
-      margin: 0 auto 4px auto;
-    }
-    
-    /* RAW RAIN BOX */
+    /* RAIN BOX (Left panel content) */
     .rain-box {
       width: 100%;
       height: 100%;
@@ -204,36 +165,17 @@
       flex-direction: column;
       gap: 6px;
     }
-
-    .rain-title {
-      color: #66ff9a;
-      font-size: 14px;
-      opacity: 0.9;
-    }
-
+    .rain-title { color: #66ff9a; font-size: 14px; opacity: 0.9; }
     .rain-amount {
       color: #66ff9a;
       font-size: 42px;
       font-weight: 800;
       letter-spacing: 2px;
       margin-top: 2px;
-      text-shadow: 0 0 12px rgba(102, 255, 154, 0.65);
+      text-shadow: 0 0 12px rgba(102,255,154,0.65);
     }
-
-    .rain-timer {
-      color: #66ff9a;
-      font-size: 13px;
-      opacity: 0.55;
-      margin-top: -4px;
-      font-weight: 600;
-    }
-
-    .rain-buttons {
-      margin-top: 14px;
-      display: flex;
-      gap: 12px;
-    }
-
+    .rain-timer { color: #66ff9a; font-size: 13px; opacity: 0.55; margin-top: -4px; font-weight: 600; }
+    .rain-buttons { margin-top: 14px; display: flex; gap: 12px; }
     .rain-tip-btn {
       flex: 1;
       display: flex;
@@ -248,46 +190,19 @@
       font-size: 15px;
       cursor: pointer;
     }
+    .tip-icon { width: 18px; height: 18px; background: #66ff9a; border-radius: 50%; }
+    .rain-join-btn { flex: 1; padding: 10px 0; background: #66ff9a; border-radius: 10px; border: none; color: #0f151c; font-size: 15px; cursor: pointer; }
+    .rain-info { margin-top: 14px; font-size: 13px; opacity: 0.45; font-weight: 500; }
+    .rain-info span { color: #66ff9a; opacity: 1; }
 
-    .tip-icon {
-      width: 18px;
-      height: 18px;
-      background: #66ff9a;
-      border-radius: 50%;
-    }
-
-    .rain-join-btn {
-      flex: 1;
-      padding: 10px 0;
-      background: #66ff9a;
-      border-radius: 10px;
-      border: none;
-      color: #0f151c;
-      font-size: 15px;
-      cursor: pointer;
-    }
-
-    .rain-info {
-      margin-top: 14px;
-      font-size: 13px;
-      opacity: 0.45;
-      font-weight: 500;
-    }
-
-    .rain-info span {
-      color: #66ff9a;
-      opacity: 1;
-    }
-
-    /* GAME SELECT GRID */
+    /* GAME GRID */
     .game-grid {
       display: flex;
       gap: 26px;
-      padding: 40px 20px;
+      padding: 40px 0;
       justify-content: center;
       flex-wrap: wrap;
     }
-
     .game-box {
       width: 250px;
       height: 255px;
@@ -300,7 +215,6 @@
       padding-top: 22px;
       position: relative;
     }
-
     .game-title-tag {
       position: absolute;
       top: 12px;
@@ -310,27 +224,9 @@
       font-size: 11px;
       border-radius: 6px;
     }
-
-    .game-icon {
-      width: 85px;
-      height: 85px;
-      background: #2e3b46;
-      border-radius: 18px;
-      margin-bottom: 22px;
-    }
-
-    .game-title {
-      font-size: 20px;
-      letter-spacing: 1px;
-    }
-
-    .game-sub {
-      font-size: 12px;
-      opacity: 0.35;
-      margin-top: 4px;
-      margin-bottom: 26px;
-    }
-
+    .game-icon { width: 85px; height: 85px; background: #2e3b46; border-radius: 18px; margin-bottom: 22px; }
+    .game-title { font-size: 20px; letter-spacing: 1px; }
+    .game-sub { font-size: 12px; opacity: 0.35; margin-top: 4px; margin-bottom: 26px; }
     .game-play-btn {
       width: 80%;
       padding: 12px 0;
@@ -341,22 +237,18 @@
       font-weight: 700;
       cursor: pointer;
       background: linear-gradient(0deg, #3de772, #61ffa0);
-      box-shadow: 0 0 18px rgba(97, 255, 160, 0.25);
+      box-shadow: 0 0 18px rgba(97,255,160,0.25);
       transition: 0.15s;
     }
-
-    .game-play-btn:hover {
-      filter: brightness(1.2);
-    }
+    .game-play-btn:hover { filter: brightness(1.2); }
 
     /* HISTORY / TABS */
     .history-container {
       width: 100%;
-      margin-top: 40px;
+      margin-top: 10px;
       background: transparent;
-      padding: 10px 20px 40px 20px;
+      padding: 10px 0 40px 0;
     }
-
     .history-tabs {
       display: flex;
       justify-content: center;
@@ -364,30 +256,20 @@
       padding-bottom: 20px;
       border-bottom: 1px solid #1c2a35;
     }
-
     .history-tab {
       font-size: 16px;
       opacity: 0.45;
       cursor: pointer;
       padding: 10px 20px;
     }
-
     .history-tab.active {
       opacity: 1;
       background: #121a23;
       border-radius: 14px;
       color: #4cff88;
     }
-
-    .history-table {
-      display: none;
-      padding: 20px 40px;
-    }
-
-    .history-table.active {
-      display: block;
-    }
-
+    .history-table { display: none; padding: 20px 40px; }
+    .history-table.active { display: block; }
     .history-row {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -395,30 +277,83 @@
       border-bottom: 1px solid #1c2a35;
       font-size: 15px;
     }
+    .history-row.header { opacity: 0.35; }
+    .history-row.empty { color: #73828c; font-style: italic; opacity: 0.5; }
 
-    .history-row.header {
-      opacity: 0.35;
+    /* FOOTER */
+    .site-footer {
+      margin-top: 40px;
+      background: #12202a;
+      border-top: 1px solid rgba(255,255,255,0.02);
+      padding: 36px 20px;
+      color: #9aa6af;
+    }
+    .footer-inner {
+      width: 1200px;
+      max-width: calc(100% - 40px);
+      margin: 0 auto;
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      justify-content: space-between;
     }
 
-    .history-row.empty {
-      color: #73828c;
-      font-style: italic;
-      opacity: 0.5;
+    .footer-left {
+      width: 48%;
+    }
+    .footer-logo {
+      width: 160px;
+      height: 40px;
+      background: linear-gradient(90deg,#18313a,#2d4a4b);
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    .footer-desc {
+      font-size: 13px;
+      line-height: 1.5;
+      opacity: 0.6;
+      color: #93a0a8;
+      margin-bottom: 18px;
+    }
+    .footer-copy { font-size: 12px; color: #6b7b82; opacity: 0.6; }
+
+    .footer-cols {
+      display: flex;
+      gap: 36px;
+      align-items: flex-start;
+    }
+    .footer-col {
+      min-width: 120px;
+    }
+    .footer-col h4 {
+      font-size: 14px;
+      margin-bottom: 12px;
+      color: #e6f7ef;
+      opacity: 0.9;
+    }
+    .footer-col a, .footer-col div {
+      display: block;
+      font-size: 13px;
+      color: #9aa6af;
+      opacity: 0.7;
+      margin-bottom: 8px;
+      text-decoration: none;
+      cursor: pointer;
     }
 
-    /* small responsive tweaks */
-    @media (max-width: 900px) {
-      .cases-row, .game-grid { justify-content: center; }
-      .case-box, .game-box { width: 45%; margin-bottom: 16px; }
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .container, .footer-inner { width: calc(100% - 40px); }
+      .footer-left { width: 55%; }
+    }
+    @media (max-width: 800px) {
+      .row { flex-direction: column; }
       .left-panel { width: 100%; }
-      .row { flex-direction: column; gap: 12px; padding: 12px; }
-    }
-
-    @media (max-width: 480px) {
-      .case-box, .game-box { width: 100%; }
+      .footer-inner { flex-direction: column; gap: 18px; }
+      .footer-left { width: 100%; }
+      .footer-cols { width: 100%; justify-content: space-between; }
       .history-row { grid-template-columns: 1fr 1fr; row-gap: 8px; }
     }
-
   </style>
 </head>
 <body>
@@ -438,184 +373,187 @@
     </div>
   </div>
 
-  <!-- MAIN PANELS -->
-  <div class="row">
-    <div class="left-panel">
+  <div class="container">
 
-      <div class="rain-box">
-        <div class="rain-title">THE RAW RAIN</div>
-        <div class="rain-amount">2.632</div>
-        <div class="rain-timer">RAINS IN 9M 54S</div>
+    <!-- PANELS -->
+    <div class="row">
+      <div class="left-panel">
+        <div class="rain-box">
+          <div class="rain-title">THE RAW RAIN</div>
+          <div class="rain-amount">2.632</div>
+          <div class="rain-timer">RAINS IN 9M 54S</div>
 
-        <div class="rain-buttons">
-          <button class="rain-tip-btn">
-            <span class="tip-icon"></span>
-            TIP
-          </button>
+          <div class="rain-buttons">
+            <button class="rain-tip-btn"><span class="tip-icon"></span>TIP</button>
+            <button class="rain-join-btn">JOIN</button>
+          </div>
 
-          <button class="rain-join-btn">JOIN</button>
-        </div>
-
-        <div class="rain-info">
-          Claim balance from the pot every <span>30 minutes</span>
+          <div class="rain-info">Claim balance from the pot every <span>30 minutes</span></div>
         </div>
       </div>
 
-    </div>
-
-    <div class="right-panel">
-      <div class="img-placeholder" style="height: 100%;"></div>
-    </div>
-  </div>
-
-  <!-- CASES TITLE -->
-  <div class="cases-title">FEATURED CASES</div>
-
-  <!-- CASE LINE -->
-  <div class="cases-row">
-
-    <div class="case-box">
-      <div class="case-img"></div>
-      <div class="case-name">SPARKLE TIME</div>
-      <div class="case-value">169.78k</div>
-      <button class="open-btn">OPEN</button>
-    </div>
-
-    <div class="case-box">
-      <div class="case-img"></div>
-      <div class="case-name">MAXED OUT</div>
-      <div class="case-value">68.16k</div>
-      <button class="open-btn">OPEN</button>
-    </div>
-
-    <div class="case-box">
-      <div class="case-img"></div>
-      <div class="case-name">TALKING DA...</div>
-      <div class="case-value">47.52k</div>
-      <button class="open-btn">OPEN</button>
-    </div>
-
-    <div class="case-box">
-      <div class="case-img"></div>
-      <div class="case-name">VAMPIRE JUICE</div>
-      <div class="case-value">42.09k</div>
-      <button class="open-btn">OPEN</button>
-    </div>
-
-    <div class="case-box">
-      <div class="case-img"></div>
-      <div class="case-name">DOMINUS DR...</div>
-      <div class="case-value">27.86k</div>
-      <button class="open-btn">OPEN</button>
-    </div>
-
-  </div> <!-- properly closed cases-row -->
-
-  <!-- GAME SELECTION GRID -->
-  <div class="game-grid">
-
-    <div class="game-box">
-      <div class="game-icon"></div>
-      <div class="game-title">CRASH</div>
-      <div class="game-sub">ORIGINAL</div>
-      <button class="game-play-btn">PLAY</button>
-    </div>
-
-    <div class="game-box">
-      <div class="game-icon"></div>
-      <div class="game-title">DICE</div>
-      <div class="game-sub">ORIGINAL</div>
-      <button class="game-play-btn">PLAY</button>
-    </div>
-
-    <div class="game-box">
-      <div class="game-title-tag">NEW</div>
-      <div class="game-icon"></div>
-      <div class="game-title">CASES</div>
-      <div class="game-sub">ORIGINAL</div>
-      <button class="game-play-btn">PLAY</button>
-    </div>
-
-    <div class="game-box">
-      <div class="game-icon"></div>
-      <div class="game-title">MINES</div>
-      <div class="game-sub">ORIGINAL</div>
-      <button class="game-play-btn">PLAY</button>
-    </div>
-
-  </div>
-
-  <!-- HISTORY / TABS -->
-  <div class="history-container">
-    <div class="history-tabs">
-      <div class="history-tab active" data-target="recent">RECENT</div>
-      <div class="history-tab" data-target="lucky">LUCKY WINS</div>
-      <div class="history-tab" data-target="high">HIGH ROLLERS</div>
-    </div>
-
-    <!-- RECENT TABLE -->
-    <div class="history-table active" id="recent">
-      <div class="history-row header">
-        <div>User</div><div>Date</div><div>Bet</div><div>Profit</div><div>Multiplier</div><div>Game</div>
-      </div>
-      <div class="history-row empty">
-        <div>—</div><div>No recent bets</div><div>—</div><div>—</div><div>—</div><div>—</div>
+      <div class="right-panel">
+        <div style="width:100%;height:100%;background:#0f1a21;border-radius:10px;"></div>
       </div>
     </div>
 
-    <!-- LUCKY WINS TABLE -->
-    <div class="history-table" id="lucky">
-      <div class="history-row header">
-        <div>User</div><div>Date</div><div>Bet</div><div>Profit</div><div>Multiplier</div><div>Game</div>
+    <!-- CASES -->
+    <div class="cases-title">FEATURED CASES</div>
+    <div class="cases-row">
+      <div class="case-box">
+        <div class="case-img"></div>
+        <div class="case-name">SPARKLE TIME</div>
+        <div class="case-value">169.78k</div>
+        <button class="open-btn">OPEN</button>
       </div>
-      <div class="history-row empty">
-        <div>—</div><div>No lucky wins yet</div><div>—</div><div>—</div><div>—</div><div>—</div>
+
+      <div class="case-box">
+        <div class="case-img"></div>
+        <div class="case-name">MAXED OUT</div>
+        <div class="case-value">68.16k</div>
+        <button class="open-btn">OPEN</button>
+      </div>
+
+      <div class="case-box">
+        <div class="case-img"></div>
+        <div class="case-name">TALKING DA...</div>
+        <div class="case-value">47.52k</div>
+        <button class="open-btn">OPEN</button>
+      </div>
+
+      <div class="case-box">
+        <div class="case-img"></div>
+        <div class="case-name">VAMPIRE JUICE</div>
+        <div class="case-value">42.09k</div>
+        <button class="open-btn">OPEN</button>
+      </div>
+
+      <div class="case-box">
+        <div class="case-img"></div>
+        <div class="case-name">DOMINUS DR...</div>
+        <div class="case-value">27.86k</div>
+        <button class="open-btn">OPEN</button>
       </div>
     </div>
 
-    <!-- HIGH ROLLERS TABLE -->
-    <div class="history-table" id="high">
-      <div class="history-row header">
-        <div>User</div><div>Date</div><div>Bet</div><div>Profit</div><div>Multiplier</div><div>Game</div>
+    <!-- GAME GRID -->
+    <div class="game-grid">
+      <div class="game-box">
+        <div class="game-icon"></div>
+        <div class="game-title">CRASH</div>
+        <div class="game-sub">ORIGINAL</div>
+        <button class="game-play-btn">PLAY</button>
       </div>
-      <div class="history-row empty">
-        <div>—</div><div>No high rollers yet</div><div>—</div><div>—</div><div>—</div><div>—</div>
+
+      <div class="game-box">
+        <div class="game-icon"></div>
+        <div class="game-title">DICE</div>
+        <div class="game-sub">ORIGINAL</div>
+        <button class="game-play-btn">PLAY</button>
+      </div>
+
+      <div class="game-box">
+        <div class="game-title-tag">NEW</div>
+        <div class="game-icon"></div>
+        <div class="game-title">CASES</div>
+        <div class="game-sub">ORIGINAL</div>
+        <button class="game-play-btn">PLAY</button>
+      </div>
+
+      <div class="game-box">
+        <div class="game-icon"></div>
+        <div class="game-title">MINES</div>
+        <div class="game-sub">ORIGINAL</div>
+        <button class="game-play-btn">PLAY</button>
       </div>
     </div>
 
-  </div>
+    <!-- HISTORY / TABS -->
+    <div class="history-container">
+      <div class="history-tabs">
+        <div class="history-tab active" data-target="recent">RECENT</div>
+        <div class="history-tab" data-target="lucky">LUCKY WINS</div>
+        <div class="history-tab" data-target="high">HIGH ROLLERS</div>
+      </div>
 
-  <!-- FOOTER NAV -->
-  <div class="footer-nav">
-    <div>
-      <div class="footer-icon"></div>
-      Home
-    </div>
-    <div>
-      <div class="footer-icon"></div>
-      Menu
-    </div>
-    <div>
-      <div class="footer-icon"></div>
-      Games
-    </div>
-    <div>
-      <div class="footer-icon"></div>
-      Chat
-    </div>
-  </div>
+      <div class="history-table active" id="recent">
+        <div class="history-row header">
+          <div>User</div><div>Date</div><div>Bet</div><div>Profit</div><div>Multiplier</div><div>Game</div>
+        </div>
+        <div class="history-row empty">
+          <div>—</div><div>No recent bets</div><div>—</div><div>—</div><div>—</div><div>—</div>
+        </div>
+      </div>
 
-<script>
-  // Tab switching for history
-  document.querySelectorAll('.history-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      document.querySelectorAll('.history-tab').forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      document.querySelectorAll('.history-table').forEach(box => box.classList.remove('active'));
-      document.getElementById(tab.dataset.target).classList.add('active');
+      <div class="history-table" id="lucky">
+        <div class="history-row header">
+          <div>User</div><div>Date</div><div>Bet</div><div>Profit</div><div>Multiplier</div><div>Game</div>
+        </div>
+        <div class="history-row empty">
+          <div>—</div><div>No lucky wins yet</div><div>—</div><div>—</div><div>—</div><div>—</div>
+        </div>
+      </div>
+
+      <div class="history-table" id="high">
+        <div class="history-row header">
+          <div>User</div><div>Date</div><div>Bet</div><div>Profit</div><div>Multiplier</div><div>Game</div>
+        </div>
+        <div class="history-row empty">
+          <div>—</div><div>No high rollers yet</div><div>—</div><div>—</div><div>—</div><div>—</div>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- .container -->
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-logo"></div>
+        <div class="footer-desc">
+          Raw is an independent platform offering interactive and engaging entertainment experiences. We are not affiliated with, endorsed by, or connected to any third-party gaming or entertainment companies. Our platform does not involve real-money gambling, account access, or virtual currency transactions.
+        </div>
+        <div class="footer-copy">© 2025 RAW365 All rights reserved.</div>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Links</h4>
+          <a>Terms of Service</a>
+          <a>Privacy Policy</a>
+          <a>FAQ</a>
+          <a>Bonus Terms</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Help</h4>
+          <a>Contact Us</a>
+          <a>Support</a>
+          <a>Fairness</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Social</h4>
+          <a>Discord</a>
+          <a>Twitter</a>
+          <a>Facebook</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // history tab switching
+    document.querySelectorAll('.history-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.history-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        document.querySelectorAll('.history-table').forEach(box => box.classList.remove('active'));
+        document.getElementById(tab.dataset.target).classList.add('active');
+      });
     });
-  });
-</script>
+  </script>
 
 </body>
 </html>
