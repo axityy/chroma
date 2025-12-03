@@ -8,8 +8,8 @@ window.addEventListener("load", () => {
 });
 
 // 1. DISCORD CONFIG (edit these)
-const DISCORD_CLIENT_ID = "YOUR_CLIENT_ID";
-const REDIRECT_URI = "https://yourdomain.com"; // the URL of your site
+const DISCORD_CLIENT_ID = "1443747179138384057";
+const REDIRECT_URI = "https://chroma-chi.vercel.app/"; // the URL of your site
 
 // 2. AUTH URL
 const OAUTH_URL = `https://discord.com/oauth2/authorize?client_id=${DISCORD_CLIENT_ID}&redirect_uri=${encodeURIComponent(
