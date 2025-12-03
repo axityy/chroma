@@ -3,196 +3,282 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pixel Copy Layout</title>
+  <title>Replica Site</title>
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
-    /* RESET */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
-      background: #111820;
-      font-family: Arial, sans-serif;
-      color: white;
-      width: 100vw;
+      background: #0f151c;
+      font-family: 'Inter', 'Montserrat', sans-serif;
+      color: #fff;
       overflow-x: hidden;
+      width: 100vw;
     }
 
     /* TOP BAR */
     .top-bar {
+      width: 100%;
+      height: 85px;
+      background: #121a23;
       display: flex;
-      justify-content: flex-end;
       align-items: center;
-      padding: 20px;
-      gap: 15px;
-    }
-    .btn-login, .btn-register {
-      padding: 12px 28px;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .btn-login {
-      background: #1c2530;
-    }
-    .btn-register {
-      background: #4cff88;
-      color: #111820;
+      justify-content: space-between;
+      padding: 18px 26px;
     }
 
-    /* MAIN SECTIONS */
-    .container {
+    .top-left-placeholder {
+      width: 220px;
+      height: 55px;
+      background: #26333f;
+      border-radius: 8px;
+    }
+
+    .top-buttons {
+      display: flex;
+      gap: 18px;
+    }
+
+    .btn-login {
+      background: #192028;
+      padding: 14px 34px;
+      border-radius: 12px;
+      border: none;
+      font-size: 15px;
+      color: white;
+      font-weight: 600;
+    }
+
+    .btn-register {
+      padding: 14px 34px;
+      background: #4cff88;
+      border-radius: 12px;
+      color: #000;
+      font-weight: 700;
+      border: none;
+      font-size: 15px;
+    }
+
+    /* RIGHT ICONS */
+    .right-icons {
+      display: flex;
+      gap: 14px;
+    }
+
+    .icon-small {
+      width: 32px;
+      height: 32px;
+      background: #22303c;
+      border-radius: 10px;
+    }
+
+    /* MAIN ROW */
+    .row {
       width: 100%;
       display: flex;
       padding: 20px;
-      gap: 20px;
+      gap: 25px;
     }
 
+    /* LEFT PANEL */
     .left-panel {
-      width: 40%;
-      background: #16212c;
-      padding: 20px;
-      border-radius: 12px;
+      width: 380px;
+      background: #111b22;
+      border-radius: 14px;
+      height: 260px;
+      padding: 18px;
     }
 
-    .right-panel {
-      width: 60%;
-      background: #16212c;
-      padding: 20px;
-      border-radius: 12px;
-    }
-
-    /* PLACEHOLDER IMAGE BLOCK */
     .img-placeholder {
       width: 100%;
-      height: 220px;
-      background: #222f3a;
-      border-radius: 10px;
-      margin-bottom: 20px;
+      height: 100%;
+      background: #2c3a44;
+      border-radius: 12px;
+      border: 2px dashed #40525c;
     }
 
-    /* CASE GRID */
-    .cases {
+    /* RIGHT HERO */
+    .right-panel {
+      flex: 1;
+      height: 260px;
+      background: #1a222c;
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    /* SECTION: CASES */
+    .cases-title {
+      text-align: center;
       margin-top: 40px;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
+      margin-bottom: 20px;
+      opacity: 0.18;
+      font-size: 48px;
+      font-weight: 800;
+      font-family: 'Montserrat';
+    }
+
+    .cases-row {
+      display: flex;
+      gap: 22px;
+      padding: 0 20px;
     }
 
     .case-box {
-      background: #1a2430;
-      border-radius: 12px;
-      padding: 16px;
-      text-align: center;
-    }
-    .case-img-placeholder {
-      width: 100%;
-      height: 110px;
-      background: #293542;
-      border-radius: 8px;
-      margin-bottom: 12px;
+      width: 200px;
+      background: #141d26;
+      border-radius: 18px;
+      padding: 22px;
+      border: 1px solid #202a33;
     }
 
-    /* FOOTER NAV */
+    .case-img {
+      width: 100%;
+      height: 130px;
+      background: #2e3b46;
+      border-radius: 10px;
+      border: 2px dashed #3a4a55;
+    }
+
+    .case-name {
+      margin-top: 10px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .case-value {
+      margin-top: 6px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .open-btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #1d2b38;
+      color: #4cff88;
+      border: 1px solid #4cff88;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+
+    /* FOOTER */
     .footer-nav {
       position: fixed;
       bottom: 0;
       left: 0;
       width: 100%;
-      background: #111820;
-      padding: 15px;
-      display: flex;
-      justify-content: space-evenly;
-      border-top: 1px solid #222;
-    }
-      /* MORE PRECISE PIXEL TUNING */
-    body {
-      background: #0f151c;
-    }
-    .top-bar {
-      padding: 18px 26px;
-    }
-    .btn-login {
-      background: #192028;
-      padding: 14px 34px;
-      font-size: 15px;
-    }
-    .btn-register {
-      padding: 14px 34px;
-      background: #4cff88;
-      font-size: 15px;
-    }
-
-    /* LEFT PANEL — exact ratio */
-    .left-panel {
-      height: 260px;
-    }
-
-    /* RIGHT PANEL — oversized hero section */
-    .right-panel {
-      height: 260px;
-    }
-
-    /* PLACEHOLDER REFINEMENTS */
-    .img-placeholder {
-      border: 2px dashed #2e3b46;
-    }
-
-    /* CASE BOXES — borders match screenshot glow */
-    .case-box {
-      border: 1px solid #202a33;
-      padding-top: 22px;
-      padding-bottom: 22px;
-    }
-
-    /* FOOTER NAV — matching height */
-    .footer-nav {
       height: 72px;
+      background: #0d1218;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
       font-size: 15px;
+    }
+
+    .footer-icon {
+      width: 28px;
+      height: 28px;
+      background: #26333f;
+      border-radius: 8px;
+      margin: 0 auto 4px auto;
     }
   </style>
 </head>
 <body>
+
   <!-- TOP BAR -->
   <div class="top-bar">
-    <div class="btn-login">LOGIN</div>
-    <div class="btn-register">REGISTER</div>
+    <div class="top-left-placeholder"></div>
+
+    <div class="top-buttons">
+      <button class="btn-login">LOGIN</button>
+      <button class="btn-register">REGISTER</button>
+    </div>
+
+    <div class="right-icons">
+      <div class="icon-small"></div>
+      <div class="icon-small"></div>
+    </div>
   </div>
 
-  <!-- MAIN ROW -->
-  <div class="container">
+  <!-- MAIN PANELS -->
+  <div class="row">
     <div class="left-panel">
       <div class="img-placeholder"></div>
     </div>
 
     <div class="right-panel">
-      <div class="img-placeholder"></div>
+      <div class="img-placeholder" style="height: 100%;"></div>
     </div>
   </div>
 
-  <!-- FEATURED CASES -->
-  <div class="cases">
+  <!-- CASES TITLE -->
+  <div class="cases-title">FEATURED CASES</div>
+
+  <!-- CASE LINE -->
+  <div class="cases-row">
     <div class="case-box">
-      <div class="case-img-placeholder"></div>
+      <div class="case-img"></div>
+      <div class="case-name">SPARKLE TIME</div>
+      <div class="case-value">169.78k</div>
+      <button class="open-btn">OPEN</button>
     </div>
+
     <div class="case-box">
-      <div class="case-img-placeholder"></div>
+      <div class="case-img"></div>
+      <div class="case-name">MAXED OUT</div>
+      <div class="case-value">68.16k</div>
+      <button class="open-btn">OPEN</button>
     </div>
+
     <div class="case-box">
-      <div class="case-img-placeholder"></div>
+      <div class="case-img"></div>
+      <div class="case-name">TALKING DA...</div>
+      <div class="case-value">47.52k</div>
+      <button class="open-btn">OPEN</button>
     </div>
+
     <div class="case-box">
-      <div class="case-img-placeholder"></div>
+      <div class="case-img"></div>
+      <div class="case-name">VAMPIRE JUICE</div>
+      <div class="case-value">42.09k</div>
+      <button class="open-btn">OPEN</button>
     </div>
+
     <div class="case-box">
-      <div class="case-img-placeholder"></div>
+      <div class="case-img"></div>
+      <div class="case-name">DOMINUS DR...</div>
+      <div class="case-value">27.86k</div>
+      <button class="open-btn">OPEN</button>
     </div>
   </div>
 
   <!-- FOOTER NAV -->
   <div class="footer-nav">
-    <div>Home</div>
-    <div>Menu</div>
-    <div>Games</div>
-    <div>Chat</div>
+    <div>
+      <div class="footer-icon"></div>
+      Home
+    </div>
+    <div>
+      <div class="footer-icon"></div>
+      Menu
+    </div>
+    <div>
+      <div class="footer-icon"></div>
+      Games
+    </div>
+    <div>
+      <div class="footer-icon"></div>
+      Chat
+    </div>
   </div>
+
 </body>
 </html>
