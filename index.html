@@ -136,6 +136,9 @@
       border-radius: 18px;
       padding: 22px;
       border: 1px solid #202a33;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .case-img {
@@ -165,6 +168,7 @@
       border: 1px solid #4cff88;
       border-radius: 10px;
       font-size: 14px;
+      cursor: pointer;
     }
 
     /* FOOTER */
@@ -190,173 +194,230 @@
     }
     
     /* RAW RAIN BOX */
-.rain-box {
-  width: 100%;
-  height: 100%;
-  background: rgba(20, 28, 36, 0.65);
-  padding: 20px;
-  border-radius: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
+    .rain-box {
+      width: 100%;
+      height: 100%;
+      background: rgba(20, 28, 36, 0.65);
+      padding: 20px;
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
 
-/* Title */
-.rain-title {
-  color: #66ff9a;
-  font-size: 14px;
-  opacity: 0.9;
-}
+    .rain-title {
+      color: #66ff9a;
+      font-size: 14px;
+      opacity: 0.9;
+    }
 
-/* Green Amount */
-.rain-amount {
-  color: #66ff9a;
-  font-size: 42px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  margin-top: 2px;
-  text-shadow: 0 0 12px rgba(102, 255, 154, 0.65);
-}
+    .rain-amount {
+      color: #66ff9a;
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-top: 2px;
+      text-shadow: 0 0 12px rgba(102, 255, 154, 0.65);
+    }
 
-/* Timer */
-.rain-timer {
-  color: #66ff9a;
-  font-size: 13px;
-  opacity: 0.55;
-  margin-top: -4px;
-  font-weight: 600;
-}
+    .rain-timer {
+      color: #66ff9a;
+      font-size: 13px;
+      opacity: 0.55;
+      margin-top: -4px;
+      font-weight: 600;
+    }
 
-/* Buttons Row */
-.rain-buttons {
-  margin-top: 14px;
-  display: flex;
-  gap: 12px;
-}
+    .rain-buttons {
+      margin-top: 14px;
+      display: flex;
+      gap: 12px;
+    }
 
-/* TIP BUTTON */
-.rain-tip-btn {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 10px 0;
-  background: transparent;
-  border: 2px solid #66ff9a;
-  border-radius: 10px;
-  color: #66ff9a;
-  font-size: 15px;
-  cursor: pointer;
-}
+    .rain-tip-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 0;
+      background: transparent;
+      border: 2px solid #66ff9a;
+      border-radius: 10px;
+      color: #66ff9a;
+      font-size: 15px;
+      cursor: pointer;
+    }
 
-.tip-icon {
-  width: 18px;
-  height: 18px;
-  background: #66ff9a;
-  border-radius: 50%;
-}
+    .tip-icon {
+      width: 18px;
+      height: 18px;
+      background: #66ff9a;
+      border-radius: 50%;
+    }
 
-/* JOIN BUTTON */
-.rain-join-btn {
-  flex: 1;
-  padding: 10px 0;
-  background: #66ff9a;
-  border-radius: 10px;
-  border: none;
-  color: #0f151c;
-  font-size: 15px;
-  cursor: pointer;
-}
+    .rain-join-btn {
+      flex: 1;
+      padding: 10px 0;
+      background: #66ff9a;
+      border-radius: 10px;
+      border: none;
+      color: #0f151c;
+      font-size: 15px;
+      cursor: pointer;
+    }
 
-/* Info text */
-.rain-info {
-  margin-top: 14px;
-  font-size: 13px;
-  opacity: 0.45;
-  font-weight: 500;
-}
+    .rain-info {
+      margin-top: 14px;
+      font-size: 13px;
+      opacity: 0.45;
+      font-weight: 500;
+    }
 
-.rain-info span {
-  color: #66ff9a;
-  opacity: 1;
-}
+    .rain-info span {
+      color: #66ff9a;
+      opacity: 1;
+    }
 
     /* GAME SELECT GRID */
-.game-grid {
-  display: flex;
-  gap: 26px;
-  padding: 40px 20px;
-  justify-content: center;
-}
+    .game-grid {
+      display: flex;
+      gap: 26px;
+      padding: 40px 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-/* EACH GAME CARD */
-.game-box {
-  width: 250px;
-  height: 255px;
-  background: #121a23;
-  border-radius: 18px;
-  border: 1px solid #202a33;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 22px;
-  position: relative;
-}
+    .game-box {
+      width: 250px;
+      height: 255px;
+      background: #121a23;
+      border-radius: 18px;
+      border: 1px solid #202a33;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 22px;
+      position: relative;
+    }
 
-/* “NEW” TAG */
-.game-title-tag {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: #ff4d6d;
-  padding: 4px 10px;
-  font-size: 11px;
-  border-radius: 6px;
-}
+    .game-title-tag {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: #ff4d6d;
+      padding: 4px 10px;
+      font-size: 11px;
+      border-radius: 6px;
+    }
 
-/* ICON */
-.game-icon {
-  width: 85px;
-  height: 85px;
-  background: #2e3b46;
-  border-radius: 18px;
-  margin-bottom: 22px;
-}
+    .game-icon {
+      width: 85px;
+      height: 85px;
+      background: #2e3b46;
+      border-radius: 18px;
+      margin-bottom: 22px;
+    }
 
-/* TITLE */
-.game-title {
-  font-size: 20px;
-  letter-spacing: 1px;
-}
+    .game-title {
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
 
-/* SUBTITLE */
-.game-sub {
-  font-size: 12px;
-  opacity: 0.35;
-  margin-top: 4px;
-  margin-bottom: 26px;
-}
+    .game-sub {
+      font-size: 12px;
+      opacity: 0.35;
+      margin-top: 4px;
+      margin-bottom: 26px;
+    }
 
-/* PLAY BUTTON */
-.game-play-btn {
-  width: 80%;
-  padding: 12px 0;
-  border-radius: 12px;
-  border: none;
-  font-size: 15px;
-  color: #0f151c;
-  font-weight: 700;
-  cursor: pointer;
-  background: linear-gradient(0deg, #3de772, #61ffa0);
-  box-shadow: 0 0 18px rgba(97, 255, 160, 0.25);
-  transition: 0.15s;
-}
+    .game-play-btn {
+      width: 80%;
+      padding: 12px 0;
+      border-radius: 12px;
+      border: none;
+      font-size: 15px;
+      color: #0f151c;
+      font-weight: 700;
+      cursor: pointer;
+      background: linear-gradient(0deg, #3de772, #61ffa0);
+      box-shadow: 0 0 18px rgba(97, 255, 160, 0.25);
+      transition: 0.15s;
+    }
 
-.game-play-btn:hover {
-  filter: brightness(1.2);
-}
+    .game-play-btn:hover {
+      filter: brightness(1.2);
+    }
 
+    /* HISTORY / TABS */
+    .history-container {
+      width: 100%;
+      margin-top: 40px;
+      background: transparent;
+      padding: 10px 20px 40px 20px;
+    }
+
+    .history-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #1c2a35;
+    }
+
+    .history-tab {
+      font-size: 16px;
+      opacity: 0.45;
+      cursor: pointer;
+      padding: 10px 20px;
+    }
+
+    .history-tab.active {
+      opacity: 1;
+      background: #121a23;
+      border-radius: 14px;
+      color: #4cff88;
+    }
+
+    .history-table {
+      display: none;
+      padding: 20px 40px;
+    }
+
+    .history-table.active {
+      display: block;
+    }
+
+    .history-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      padding: 14px 0;
+      border-bottom: 1px solid #1c2a35;
+      font-size: 15px;
+    }
+
+    .history-row.header {
+      opacity: 0.35;
+    }
+
+    .history-row.empty {
+      color: #73828c;
+      font-style: italic;
+      opacity: 0.5;
+    }
+
+    /* small responsive tweaks */
+    @media (max-width: 900px) {
+      .cases-row, .game-grid { justify-content: center; }
+      .case-box, .game-box { width: 45%; margin-bottom: 16px; }
+      .left-panel { width: 100%; }
+      .row { flex-direction: column; gap: 12px; padding: 12px; }
+    }
+
+    @media (max-width: 480px) {
+      .case-box, .game-box { width: 100%; }
+      .history-row { grid-template-columns: 1fr 1fr; row-gap: 8px; }
+    }
 
   </style>
 </head>
@@ -379,29 +440,28 @@
 
   <!-- MAIN PANELS -->
   <div class="row">
-<div class="left-panel">
+    <div class="left-panel">
 
-  <div class="rain-box">
-    <div class="rain-title">THE RAW RAIN</div>
-    <div class="rain-amount">2.632</div>
-    <div class="rain-timer">RAINS IN 9M 54S</div>
+      <div class="rain-box">
+        <div class="rain-title">THE RAW RAIN</div>
+        <div class="rain-amount">2.632</div>
+        <div class="rain-timer">RAINS IN 9M 54S</div>
 
-    <div class="rain-buttons">
-      <button class="rain-tip-btn">
-        <span class="tip-icon"></span>
-        TIP
-      </button>
+        <div class="rain-buttons">
+          <button class="rain-tip-btn">
+            <span class="tip-icon"></span>
+            TIP
+          </button>
 
-      <button class="rain-join-btn">JOIN</button>
+          <button class="rain-join-btn">JOIN</button>
+        </div>
+
+        <div class="rain-info">
+          Claim balance from the pot every <span>30 minutes</span>
+        </div>
+      </div>
+
     </div>
-
-    <div class="rain-info">
-      Claim balance from the pot every <span>30 minutes</span>
-    </div>
-  </div>
-
-</div>
-
 
     <div class="right-panel">
       <div class="img-placeholder" style="height: 100%;"></div>
@@ -409,85 +469,121 @@
   </div>
 
   <!-- CASES TITLE -->
-<!-- CASES TITLE -->
-<div class="cases-title">FEATURED CASES</div>
+  <div class="cases-title">FEATURED CASES</div>
 
-<!-- CASE LINE -->
-<div class="cases-row">
+  <!-- CASE LINE -->
+  <div class="cases-row">
 
     <div class="case-box">
-        <div class="case-img"></div>
-        <div class="case-name">SPARKLE TIME</div>
-        <div class="case-value">169.78k</div>
-        <button class="open-btn">OPEN</button>
+      <div class="case-img"></div>
+      <div class="case-name">SPARKLE TIME</div>
+      <div class="case-value">169.78k</div>
+      <button class="open-btn">OPEN</button>
     </div>
 
     <div class="case-box">
-        <div class="case-img"></div>
-        <div class="case-name">MAXED OUT</div>
-        <div class="case-value">68.16k</div>
-        <button class="open-btn">OPEN</button>
+      <div class="case-img"></div>
+      <div class="case-name">MAXED OUT</div>
+      <div class="case-value">68.16k</div>
+      <button class="open-btn">OPEN</button>
     </div>
 
     <div class="case-box">
-        <div class="case-img"></div>
-        <div class="case-name">TALKING DA...</div>
-        <div class="case-value">47.52k</div>
-        <button class="open-btn">OPEN</button>
+      <div class="case-img"></div>
+      <div class="case-name">TALKING DA...</div>
+      <div class="case-value">47.52k</div>
+      <button class="open-btn">OPEN</button>
     </div>
 
     <div class="case-box">
-        <div class="case-img"></div>
-        <div class="case-name">VAMPIRE JUICE</div>
-        <div class="case-value">42.09k</div>
-        <button class="open-btn">OPEN</button>
+      <div class="case-img"></div>
+      <div class="case-name">VAMPIRE JUICE</div>
+      <div class="case-value">42.09k</div>
+      <button class="open-btn">OPEN</button>
     </div>
 
     <div class="case-box">
-        <div class="case-img"></div>
-        <div class="case-name">DOMINUS DR...</div>
-        <div class="case-value">27.86k</div>
-        <button class="open-btn">OPEN</button>
+      <div class="case-img"></div>
+      <div class="case-name">DOMINUS DR...</div>
+      <div class="case-value">27.86k</div>
+      <button class="open-btn">OPEN</button>
     </div>
 
-</div> <!-- FIX: properly closes cases-row -->
+  </div> <!-- properly closed cases-row -->
 
+  <!-- GAME SELECTION GRID -->
+  <div class="game-grid">
 
-<!-- GAME SELECTION GRID -->
-<div class="game-grid">
+    <div class="game-box">
+      <div class="game-icon"></div>
+      <div class="game-title">CRASH</div>
+      <div class="game-sub">ORIGINAL</div>
+      <button class="game-play-btn">PLAY</button>
+    </div>
 
-  <div class="game-box">
-    <div class="game-icon"></div>
-    <div class="game-title">CRASH</div>
-    <div class="game-sub">ORIGINAL</div>
-    <button class="game-play-btn">PLAY</button>
+    <div class="game-box">
+      <div class="game-icon"></div>
+      <div class="game-title">DICE</div>
+      <div class="game-sub">ORIGINAL</div>
+      <button class="game-play-btn">PLAY</button>
+    </div>
+
+    <div class="game-box">
+      <div class="game-title-tag">NEW</div>
+      <div class="game-icon"></div>
+      <div class="game-title">CASES</div>
+      <div class="game-sub">ORIGINAL</div>
+      <button class="game-play-btn">PLAY</button>
+    </div>
+
+    <div class="game-box">
+      <div class="game-icon"></div>
+      <div class="game-title">MINES</div>
+      <div class="game-sub">ORIGINAL</div>
+      <button class="game-play-btn">PLAY</button>
+    </div>
+
   </div>
 
-  <div class="game-box">
-    <div class="game-icon"></div>
-    <div class="game-title">DICE</div>
-    <div class="game-sub">ORIGINAL</div>
-    <button class="game-play-btn">PLAY</button>
+  <!-- HISTORY / TABS -->
+  <div class="history-container">
+    <div class="history-tabs">
+      <div class="history-tab active" data-target="recent">RECENT</div>
+      <div class="history-tab" data-target="lucky">LUCKY WINS</div>
+      <div class="history-tab" data-target="high">HIGH ROLLERS</div>
+    </div>
+
+    <!-- RECENT TABLE -->
+    <div class="history-table active" id="recent">
+      <div class="history-row header">
+        <div>User</div><div>Date</div><div>Bet</div><div>Profit</div><div>Multiplier</div><div>Game</div>
+      </div>
+      <div class="history-row empty">
+        <div>—</div><div>No recent bets</div><div>—</div><div>—</div><div>—</div><div>—</div>
+      </div>
+    </div>
+
+    <!-- LUCKY WINS TABLE -->
+    <div class="history-table" id="lucky">
+      <div class="history-row header">
+        <div>User</div><div>Date</div><div>Bet</div><div>Profit</div><div>Multiplier</div><div>Game</div>
+      </div>
+      <div class="history-row empty">
+        <div>—</div><div>No lucky wins yet</div><div>—</div><div>—</div><div>—</div><div>—</div>
+      </div>
+    </div>
+
+    <!-- HIGH ROLLERS TABLE -->
+    <div class="history-table" id="high">
+      <div class="history-row header">
+        <div>User</div><div>Date</div><div>Bet</div><div>Profit</div><div>Multiplier</div><div>Game</div>
+      </div>
+      <div class="history-row empty">
+        <div>—</div><div>No high rollers yet</div><div>—</div><div>—</div><div>—</div><div>—</div>
+      </div>
+    </div>
+
   </div>
-
-  <div class="game-box">
-    <div class="game-title-tag">NEW</div>
-    <div class="game-icon"></div>
-    <div class="game-title">CASES</div>
-    <div class="game-sub">ORIGINAL</div>
-    <button class="game-play-btn">PLAY</button>
-  </div>
-
-  <div class="game-box">
-    <div class="game-icon"></div>
-    <div class="game-title">MINES</div>
-    <div class="game-sub">ORIGINAL</div>
-    <button class="game-play-btn">PLAY</button>
-  </div>
-
-</div>
-
-
 
   <!-- FOOTER NAV -->
   <div class="footer-nav">
@@ -508,6 +604,18 @@
       Chat
     </div>
   </div>
+
+<script>
+  // Tab switching for history
+  document.querySelectorAll('.history-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.history-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      document.querySelectorAll('.history-table').forEach(box => box.classList.remove('active'));
+      document.getElementById(tab.dataset.target).classList.add('active');
+    });
+  });
+</script>
 
 </body>
 </html>
