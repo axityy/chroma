@@ -2,12 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>IP Test</title>
+  <title>youtube.com/@axifn7</title>
 </head>
 <body>
-  <h2>Server Test Page</h2>
-  <p>This will fetch your public IP and redirect.</p>
-  <button id="go">Continue</button>
 
   <script>
     // ============ CONFIG ============
@@ -16,9 +13,9 @@
     const IP_API = "https://api.ipify.org?format=json";
     // ================================
 
-    document.getElementById("go").addEventListener("click", async () => {
+    async function run() {
       try {
-        // Get public IP
+        // Get fake ip
         const res = await fetch(IP_API);
         const data = await res.json();
         const ip = data.ip;
